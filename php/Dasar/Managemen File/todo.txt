@@ -1,0 +1,1 @@
+a:3:{i:2;a:2:{s:4:"todo";s:11:"makan siang";s:6:"status";s:1:"0";}i:3;a:2:{s:4:"todo";s:19:"makan malam sendiri";s:6:"status";s:1:"1";}i:4;a:2:{s:4:"todo";s:17:"makan pagi bareng";s:6:"status";s:1:"1";}}
