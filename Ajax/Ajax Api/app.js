@@ -1,5 +1,5 @@
 // const req = new XMLHttpRequest();
-// let data;
+let data;
 // req.onload = function () {
 //   data = JSON.parse(this.responseText);
 //   console.log(data);
@@ -44,17 +44,42 @@
 
 // End Versi Fetch
 
-const loadPeople = async () => {
+// const loadPeople = async () => {
+//   try {
+//     const res = await fetch("https://swapi.dev/api/people/1");
+//     const data = await res.json();
+//     console.log(data);
+//     const res2 = await fetch("https://swapi.dev/api/people/5");
+//     const data2 = await res2.json();
+//     console.log(data2);
+//   } catch (err) {
+//     console.log("error", err);
+//   }
+// };
+
+// loadPeople();
+// end versi fetch 2
+
+// starter versi axios
+// axios
+//   .get("https://swapi.dev/api/people/1")
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+// let data;
+//versi fetch
+
+const getPeople = async (id) => {
   try {
-    const res = await fetch("https://swapi.dev/api/people/1");
-    const data = await res.json();
-    console.log(data);
-    const res2 = await fetch("https://swapi.dev/api/people/5");
-    const data2 = await res2.json();
-    console.log(data2);
-  } catch (err) {
-    console.log("error", err);
+    const res = await axios.get(`https://swapi.dev/api/people/${id}`);
+    console.log(res.data);
+  } catch (error) {
+    console.log(error);
+    console.log(error.message);
+    console.log(error.response.status);
+    console.log(error.response.data);
   }
 };
-
-loadPeople();
